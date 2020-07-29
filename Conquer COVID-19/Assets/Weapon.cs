@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+
+    public GameObject projectile;
+    public Transform shotPoint;
+    public float timeBetweenShots;
+    private float shotTime;
+
+
+
     void Start()
     {
         
@@ -15,6 +23,14 @@ public class Weapon : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         transform.rotation = rotation;
 
+        if(Input.GetMouseButton(0)){
+
+            if(Time.time >= shotTime){
+                Instantiate(projectile, shotPoint.position, transform.rotation);
+                shotTime = Time.time + timeBetweenShots;
+            }
+
+        }
 
     }
 }
