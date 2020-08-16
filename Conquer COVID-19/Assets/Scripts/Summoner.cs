@@ -17,6 +17,10 @@ public class Summoner : Enemy
     private float summonTime;
 
     public Enemy enemyToSummon;
+    public float meleeAttackSpeed;
+    public float stopDistance;
+    private float attackTime;
+
 
     public override void Start() {
         base.Start();
@@ -42,6 +46,15 @@ public class Summoner : Enemy
                     anim.SetTrigger("summon");
                 }
             }
+
+            if(Vector2.Distance(transform.position, player.position) < stopDistance){
+                if(Time.time >= attackTime){
+                    
+                    StartCoroutine(Attack());
+                    attackTime = Time.time + timeBetweenAttacks;
+                }
+
+            }
         }
 
     }    
@@ -51,6 +64,23 @@ public class Summoner : Enemy
     public void Summon(){
         if (player != null){
             Instantiate(enemyToSummon, transform.position, transform.rotation);
+        }
+    }
+
+
+    
+    IEnumerator Attack(){
+        player.GetComponent<Player>().TakeDamage(damage);
+
+        Vector2 originalPosition = transform.position;
+        Vector2 targetPosition = player.position;
+
+        float percent = 0;
+        while (percent <= 1){
+            percent += Time.deltaTime * meleeAttackSpeed;
+            float formula = (-Mathf.Pow(percent,2) + percent) * 4;
+            transform.position = Vector2.Lerp(originalPosition, targetPosition, formula);
+            yield return null;
         }
     }
     

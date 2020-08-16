@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,7 @@ public class MeeleEnemy : Enemy
             else {
                 if(Time.time >= attackTime){
                     
-                    StartCoroutine(Attack());
+                    StartCoroutine(Attack()); 
 
                     attackTime = Time.time + timeBetweenAttacks;
                 }
