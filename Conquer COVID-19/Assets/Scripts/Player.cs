@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
@@ -11,7 +13,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveAmount;
     private Animator anim;
-    public float health;
+    public int health;
+
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
 
 
 
@@ -50,9 +56,41 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damageAmount){
         health -= damageAmount;
 
+        UpdateHealthUI(health);
+        
         if(health <= 0){
             Destroy(gameObject);
         }
+    }
+
+    void UpdateHealthUI(int currentHealth)
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < currentHealth)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+        }
+    }
+
+    public void Heal(int healAmount)
+    {
+        if (health + healAmount > 5)
+        {
+            health = 5;
+        }
+        else
+        {
+            health += healAmount;
+        }
+
+        UpdateHealthUI(health);
+        
     }
 
 }

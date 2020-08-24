@@ -449,6 +449,8 @@ MonoBehaviour:
   speed: 3
   timeBetweenAttacks: 4
   damage: 0
+  pickupChance: 100
+  pickup: {fileID: 6183513984049491094, guid: 6307f6b34e22d8b45bb1c81d713025e2, type: 3}
   stopDistance: 3
   shotPoint: {fileID: 7452193112028224201}
   enemyBullet: {fileID: 6521505816391052578, guid: e0f7ac169bc11a04d95f0e1002a1c3f1,

@@ -368,6 +368,8 @@ MonoBehaviour:
   speed: 2
   timeBetweenAttacks: 2
   damage: 1
+  pickupChance: 30
+  pickup: {fileID: 6183513984049491094, guid: 6307f6b34e22d8b45bb1c81d713025e2, type: 3}
   minX: -13.06
   maxX: 14.04
   minY: -7.64
