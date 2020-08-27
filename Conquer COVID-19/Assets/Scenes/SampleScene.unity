@@ -541,10 +541,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
-    - {fileID: 2111088355271968185, guid: c5c652632ddaf83498197c63c3d81a68, type: 3}
-    - {fileID: 3500042938983282111, guid: 2fbc8da9f364aee4fb5ab8833914add3, type: 3}
-    - {fileID: 3009563804703422527, guid: 3b2604ee3af66124a9075e7f186a7dcc, type: 3}
-    count: 1
+    - {fileID: 7452193110597877221, guid: 0d815ee8b318d9047a1f853967a77ba9, type: 3}
+    - {fileID: 7452193110597877221, guid: 0d815ee8b318d9047a1f853967a77ba9, type: 3}
+    - {fileID: 7452193110597877221, guid: 0d815ee8b318d9047a1f853967a77ba9, type: 3}
+    count: 3
     timeBetweenSpawns: 1
   spawPoints:
   - {fileID: 1387769956}
@@ -560,7 +560,7 @@ MonoBehaviour:
   - {fileID: 1058758644}
   - {fileID: 795676452}
   timeBetweenWaves: 3
-  boss: {fileID: 1514144082263153282, guid: 3b57ba3bd251ce44684667022a8a6cd6, type: 3}
+  boss: {fileID: 6993683852394112745, guid: 3b57ba3bd251ce44684667022a8a6cd6, type: 3}
   bossSpawnPoint: {fileID: 603591088}
 --- !u!4 &264270684
 Transform:

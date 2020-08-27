@@ -7,6 +7,8 @@ public class HealthPickup : MonoBehaviour
 
     Player playerScript;
     public int healAmount;
+    public GameObject effect;
+
 
     private void Start()
     {
@@ -16,6 +18,7 @@ public class HealthPickup : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Instantiate(effect, transform.position, transform.rotation);
             playerScript.Heal(healAmount);
             Destroy(gameObject);
         }

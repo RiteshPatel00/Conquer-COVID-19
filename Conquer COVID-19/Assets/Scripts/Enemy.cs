@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public int pickupChance;
     public GameObject pickup;
 
+    public GameObject deathEffect;
+
     public virtual void Start(){
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
                 Instantiate(health, transform.position, transform.rotation);
             }
 
+            Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
