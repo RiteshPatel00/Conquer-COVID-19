@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public Animator hurtAnim;
+
 
 
     private void Start()
@@ -57,6 +59,7 @@ public class Player : MonoBehaviour
         health -= damageAmount;
 
         UpdateHealthUI(health);
+        hurtAnim.SetTrigger("hurt");
         
         if(health <= 0){
             Destroy(gameObject);

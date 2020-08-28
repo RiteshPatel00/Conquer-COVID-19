@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float timeBetweenAttacks;
     public int damage;
+    private Animator cameraAnim;
+
+
 
     public int pickupChance;
     public GameObject pickup;
@@ -18,6 +21,8 @@ public class Enemy : MonoBehaviour
     public GameObject deathEffect;
 
     public virtual void Start(){
+        cameraAnim = Camera.main.GetComponent<Animator>();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -35,6 +40,8 @@ public class Enemy : MonoBehaviour
 
             Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(gameObject);
+            cameraAnim.SetTrigger("shake");
+
         }
     }
 

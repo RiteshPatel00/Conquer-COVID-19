@@ -14,10 +14,12 @@ public class Boss : MonoBehaviour
 
     public int damage;
     public GameObject effect;
+    private Animator cameraAnim;
 
 
     private void Start()
     {
+        cameraAnim = Camera.main.GetComponent<Animator>();
         halfHealth = health / 2;
         anim = GetComponent<Animator>();
     }
@@ -33,6 +35,7 @@ public class Boss : MonoBehaviour
         {
             Instantiate(effect, transform.position, transform.rotation);
             Destroy(this.gameObject);
+            cameraAnim.SetTrigger("shake");
         }
 
         if (health <= halfHealth)
