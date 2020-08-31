@@ -57,10 +57,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CursorFollow.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
+    <Compile Include="Assets\Scripts\BossDeathSound.cs" />
+    <Compile Include="Assets\Scripts\BossSounds.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ChaseBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CursorFollow.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\HealthPickup.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Assets\Scripts\PatrolBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\RandomSound.cs" />
     <Compile Include="Assets\Scripts\RangedEnemy.cs" />
     <Compile Include="Assets\Scripts\Summoner.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />

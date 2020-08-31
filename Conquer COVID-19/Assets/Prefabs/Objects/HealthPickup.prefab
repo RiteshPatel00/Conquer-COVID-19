@@ -124,3 +124,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healAmount: 1
   effect: {fileID: 1622521634654239956, guid: 63ac5dfff6479ba4cbd13a18ace9cfd1, type: 3}
+  soundObject: {fileID: 5569010239798141355, guid: b35b03561a20cca468a67668c446e0a3,
+    type: 3}
