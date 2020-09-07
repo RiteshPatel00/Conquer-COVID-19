@@ -153,7 +153,7 @@ MonoBehaviour:
   speed: 3
   timeBetweenAttacks: 3
   damage: 1
-  pickupChance: 50
+  pickupChance: 25
   pickup: {fileID: 6183513984049491094, guid: 6307f6b34e22d8b45bb1c81d713025e2, type: 3}
   deathEffect: {fileID: 4028986995487723549, guid: 2c25ce3f67b46574d89ccde8e8456984,
     type: 3}

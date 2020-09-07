@@ -20,13 +20,15 @@ public class Player : MonoBehaviour
     public Sprite emptyHeart;
 
     public Animator hurtAnim;
-
+    private SceneTransitions sceneTransitions;
 
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sceneTransitions = FindObjectOfType<SceneTransitions>();
+
 
     }
 
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour
         
         if(health <= 0){
             Destroy(gameObject);
+            sceneTransitions.LoadScene("Lose");
         }
     }
 

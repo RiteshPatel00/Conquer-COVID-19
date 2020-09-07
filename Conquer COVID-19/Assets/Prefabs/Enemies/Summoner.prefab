@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   player: {fileID: 0}
-  speed: 2
+  speed: 4
   timeBetweenAttacks: 2
   damage: 1
   pickupChance: 30

@@ -18,6 +18,9 @@ public class Boss : MonoBehaviour
 
     private Slider healthBar;
 
+    private SceneTransitions sceneTransitions;
+
+
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class Boss : MonoBehaviour
         healthBar = FindObjectOfType<Slider>();
         healthBar.maxValue = health;
         healthBar.value = health;
+        sceneTransitions = FindObjectOfType<SceneTransitions>();
     }
 
 
@@ -42,6 +46,7 @@ public class Boss : MonoBehaviour
             healthBar.gameObject.SetActive(false);
             Destroy(this.gameObject);
             cameraAnim.SetTrigger("shake");
+            sceneTransitions.LoadScene("Win");
             
         }
 
