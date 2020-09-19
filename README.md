@@ -9,6 +9,10 @@ It is now free and open source and always will be. :clap: :tada:
 
 [:camera: See Screenshots](#screenshots)
 
+## Play in Browser
+
+[Play on itch.io](https://riteshpatel00.itch.io/conquer-covid-19)
+
 
 ## Getting Started
 
@@ -16,7 +20,6 @@ Follow the below instructions to get started with Conquer COVID-19 source code:
 
 1. [Make sure you have all Requirements](#requirements)
 2. [Download Source Code](#download)
-3. [Play on itch.io](https://riteshpatel00.itch.io/conquer-covid-19)
 3. Open Project in Unity and Enjoy!
 
 ## Requirements
