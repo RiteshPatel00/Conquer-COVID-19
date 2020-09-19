@@ -36,8 +36,15 @@ git clone https://github.com/RiteshPatel00/Conquer-COVID-19.git
 
 
 ## Screenshots
+![alt text](https://github.com/RiteshPatel00/Conquer-COVID-19/blob/master/Conquer%20COVID-19/Assets/ScreenShots/MainMenu.png?raw=true)
+
+<br>
+
 ![alt text](https://github.com/RiteshPatel00/Conquer-COVID-19/blob/master/Conquer%20COVID-19/Assets/ScreenShots/GamePlay.png?raw=true)
 
+<br>
+
+![alt text](https://github.com/RiteshPatel00/Conquer-COVID-19/blob/master/Conquer%20COVID-19/Assets/ScreenShots/GamePlay2.png?raw=true)
 
 
 ## License
